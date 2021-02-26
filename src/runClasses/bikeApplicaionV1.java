@@ -6,20 +6,24 @@ import baseClasses.Bicycle;
 import baseClasses.MountainBike;
 import baseClasses.MotorBike;
 
-public class main {
+public class bikeApplicaionV1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+		//Application Using MotorBike and MountainBike classes
+		
 		Scanner main = new Scanner(System.in);
 		
 		
 		//Add Two Normal Bicycle with parameters and default constractor
 		Bicycle b1 = new Bicycle();
-		Bicycle b2 = new Bicycle(40, 20, 3, "DISC", "Pink");
+		Bicycle b2 = new Bicycle("4214",40, 20, 3, "DISC", "Pink");
 		
 		
 		//Add One Mountain Bike with parameters 
-		MountainBike mb1 = new MountainBike(40, 20, 3, "DISC", "Pink", "Normal", 27);
+		MountainBike mb1 = new MountainBike("4312",40, 20, 3, "DISC", "Pink", "Normal", 27);
 		
 		
 		//Printing two Bicycles and Mountain Bike

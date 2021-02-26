@@ -14,8 +14,8 @@ public class MountainBike extends Bicycle {
 			
 		}
 	// Fully Parameterized Constructor
-	public MountainBike(int cadence, int speed, int gear, String brake, String color, String suspension, int tierSize) {
-		super(cadence,speed, gear, brake, color);
+	public MountainBike(String serialNumber,int cadence, int speed, int gear, String brake, String color, String suspension, int tierSize) {
+		super(serialNumber,cadence,speed, gear, brake, color);
 		this.suspension = suspension;
 		this.tierSize = tierSize;
 	}
@@ -45,7 +45,8 @@ public class MountainBike extends Bicycle {
 
 	@Override
 	public String toString() {
-		return "This Mountain Bicycle has the Cadence of \"" + getCadence() + "\", Speed of \"" + getSpeed() + "\", Gear of \"" + getGear() + "\", Brake of \"" + getBrake() + "\", Color of \"" + getColor() + "\", Suspension of \"" + suspension + "\", and Tier Size of \"" + tierSize + "\"";
+		return "\nMountainBike [serialNumber=" + getSerialNumber() + ", cadence=" + getCadence() + ", speed=" + getSpeed() + ", gear=" + getGear()
+				+ ", brake=" + getBrake() + ", color=" + getColor() +  "suspension=" + suspension + ", tierSize=" + tierSize + "]";
 	}
 	
 	

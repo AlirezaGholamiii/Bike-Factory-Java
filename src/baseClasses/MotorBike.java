@@ -3,7 +3,7 @@ package baseClasses;
 public class MotorBike extends Bicycle{
 
 	private String type;
-	private float engine;
+	private int engine;
 	private int gasTank;
 	private String exhaust;
 	private int horsePower;
@@ -20,9 +20,9 @@ public class MotorBike extends Bicycle{
 		}
 	
 	// Fully Parameterized Constructor
-	public MotorBike(int cadence, int speed, int gear, String brake, String color, String suspension, int tierSize,String type, float engine, int gasTank, int horsePower, String exhaust) 
+	public MotorBike(String serialNumber,int cadence, int speed, int gear, String brake, String color, String suspension, int tierSize, String type, int engine, int gasTank, int horsePower, String exhaust) 
 	{
-		super(cadence,speed, gear, brake, color);
+		super(serialNumber, cadence,speed, gear, brake, color);
 		this.type = type;
 		this.engine = engine;
 		this.gasTank = gasTank;
@@ -40,11 +40,11 @@ public class MotorBike extends Bicycle{
 		this.type = type;
 	}
 
-	public float getEngine() {
+	public int getEngine() {
 		return engine;
 	}
 
-	public void setEngine(float engine) {
+	public void setEngine(int engine) {
 		this.engine = engine;
 	}
 
@@ -83,24 +83,21 @@ public class MotorBike extends Bicycle{
 	}
 	
 	
-	public void increseEngineSize(float Lit)
+	public void increseEngineSize(int Lit)
 	{
 		this.engine = this.engine + Lit; 
 	}
-	public void decreseEngineSize(float Lit)
+	public void decreseEngineSize(int Lit)
 	{
 		this.engine = this.engine - Lit; 
 	}
 
 	@Override
 	public String toString() {
-		return "MotorBike [type=" + type + ", engine=" + engine + ", gasTank=" + gasTank + ", exhaust=" + exhaust
+		return "\nMotorBike [serialNumber=" + getSerialNumber() + ", cadence=" + getCadence() + ", speed=" + getSpeed() + ", gear=" + getGear()
+				+ ", brake=" + getBrake() + ", color=" + getColor() + ",type=" + type + ", engine=" + engine + ", gasTank=" + gasTank + ", exhaust=" + exhaust
 				+ ", horsePower=" + horsePower + "]";
 	}
-	
-	
-	
-	
 	
 	
 }

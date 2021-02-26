@@ -1,6 +1,7 @@
 package baseClasses;
 
 public class Bicycle {
+	private String serialNumber;
 	private int cadence;
 	private int speed;
 	private int gear;
@@ -9,6 +10,7 @@ public class Bicycle {
 	
 	// Default Constructor
 	public Bicycle() {
+		this.serialNumber = "Undefined";
 		this.cadence = 0;
 		this.speed = 0;
 		this.gear = 0;
@@ -17,7 +19,8 @@ public class Bicycle {
 	}
 	
 	// Fully Parameterized Constructor
-	public Bicycle(int cadence, int speed, int gear, String brake, String color) {
+	public Bicycle(String serialNumber,int cadence, int speed, int gear, String brake, String color) {
+		this.serialNumber =  serialNumber;
 		this.cadence = cadence;
 		this.speed = speed;
 		this.gear = gear;
@@ -39,6 +42,15 @@ public class Bicycle {
 	
 	
 	// Getters & Setters
+	
+	public String getSerialNumber() {
+		return serialNumber;
+	}
+
+	public void setSerialNumber(String serialNumber) {
+		this.serialNumber = serialNumber;
+	}
+	
 	public int getCadence() {
 		return cadence;
 	}
@@ -78,10 +90,14 @@ public class Bicycle {
 	public void setColor(String color) {
 		this.color = color;
 	}
+	
+	
+	
 
 	@Override
 	public String toString() {
-		return "This Bicycle has the Cadence of \"" + cadence + "\", Speed of \"" + speed + "\", Gear of \"" + gear + "\", Brake of \"" + brake + "\", and Color of \"" + color + "\"";
+		return "Bicycle [serialNumber=" + serialNumber + ", cadence=" + cadence + ", speed=" + speed + ", gear=" + gear
+				+ ", brake=" + brake + ", color=" + color + "]";
 	}
 	
 	
